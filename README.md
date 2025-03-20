@@ -48,18 +48,24 @@ Example:
 1. Install the **Code Runner** extension from the VS Code marketplace.  
 2. Open **VS Code** and open **Settings** (`Ctrl + ,`) or go to `File > Preferences > Settings`.  
 3. Search for `code-runner.executorMap` and click on **Edit in settings.json**.  
-4. change the "CPP" configuration to use the script with C++ files:  
+4. **Make sure to move the script file (`smart-compile.sh`) to the same directory as your C++ file OR place it in the `~/bin` directory, then add its path to the `PATH` using the command:**
+> If it's in the same folder, you don't need to add it to `~/bin` and `PATH`.
+```bash
+echo 'export PATH="$HOME/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
+```
+5. change the "CPP" configuration to use the script with C++ files:  
    ```json  
    "code-runner.executorMap": {  
        "cpp": "bash ./smart-compile.sh $fileName"  
    }  
    ```  
-5. Enable Code Runner to run in the terminal:  
+6. Enable Code Runner to run in the terminal:  
    - Open **Settings** (`Ctrl + ,`)  
    - Search for `code-runner.runInTerminal`  
    - **Check** the option ✅ **"Code-runner: Run in Terminal"**  
-6. Save the file.  
-7. To run a C++ file using Code Runner, open the file and press **`Ctrl + Alt + N`** or click the **Run** button.  
+7. Save the file.  
+8. To run a C++ file using Code Runner, open the file and press **`Ctrl + Alt + N`** or click the **Run** button.  
 
 
 ---
@@ -94,5 +100,3 @@ Compilation error:
    git push origin feature/new-feature
    ```
 5. Create a Pull Request.
-
-
