@@ -14,7 +14,7 @@ A smart script to automate C++ compilation — only recompiles when the source c
 ## 🛠️ Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Smart-Compile.git
+   git clone https://github.com/AbdoViper23/Smart-Compile.git
    ```
 2. Navigate to the script folder:
    ```bash
